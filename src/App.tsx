@@ -4,14 +4,11 @@ import meatImage from './assets/meat.png';
 import cheeseImage from './assets/cheese.png';
 import lettuceImage from './assets/lettuce.png';
 import baconImage from './assets/bacon.png';
-import IngredientItem from './components/IngredientItem/IngredientItem';
 import Burger from './components/Burger/Burger';
+import IngredientsBlock from './components/IngredientsBlock/IngredientsBlock';
+import {Ingredient, IngredientInfo} from './lib/interfaces';
 
-interface Ingredient {
-  name: string;
-  price: number;
-  image: string;
-}
+
 
 const INGREDIENTS: Ingredient[] = [
   {name: 'Meat', price: 80, image: meatImage},
@@ -21,7 +18,7 @@ const INGREDIENTS: Ingredient[] = [
 ];
 
 const App = () => {
-  const [ingredients, setIngredients] = useState([
+  const [ingredients, setIngredients] = useState<IngredientInfo[]>([
     {name: 'Meat', count: 0},
     {name: 'Cheese', count: 0},
     {name: 'Salad', count: 0},
@@ -73,23 +70,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className="content">
-        <div className="col">
-          <h2 className="title">Ingredients:</h2>
-          {INGREDIENTS.map(({name, price, image}, i) => (
-            <IngredientItem
-              key={i}
-              image={image}
-              name={name}
-              price={price}
-              count={ingredients[i].count}
-              addIngredient={() => addIngredient(name)}
-              removeIngredient={() => removeIngredient(name)}
-            />
-          ))}
-        </div>
+        <IngredientsBlock
+          ingredients={INGREDIENTS}
+          ingredientsInfo={ingredients}
+          addIngredient={addIngredient}
+          removeIngredient={removeIngredient}
+        />
         <Burger ingredients={ingredients} price={getPrice}/>
-      </div>
     </div>
   );
 };

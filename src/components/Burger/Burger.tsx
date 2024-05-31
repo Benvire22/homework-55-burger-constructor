@@ -1,19 +1,15 @@
 import './Burger.css';
 import React from 'react';
-
-interface Ingredient {
-  name: string;
-  count: number;
-}
+import { IngredientInfo } from '../../lib/interfaces';
 
 interface Props {
-  ingredients: Ingredient[];
+  ingredients: IngredientInfo[];
   price: () => number;
 }
 
 const Burger: React.FC<Props> = ({ingredients, price}) => {
 
-  const addIngredient = (ingredients: Ingredient[]) => {
+  const addIngredient = (ingredients: IngredientInfo[]) => {
     return ingredients.reduce((acc: React.ReactNode[], current) => {
       for (let i = 0; i < current.count; i++) {
         acc.push(<div key={current.count + current.name + i} className={current.name}></div>);
@@ -36,7 +32,6 @@ const Burger: React.FC<Props> = ({ingredients, price}) => {
       </div>
       <h3 className="burgerPrice">Price: {price()}.</h3>
     </div>
-
   );
 };
 

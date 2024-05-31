@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.content {
+.App {
   display: flex;
   gap: 20px;
 }

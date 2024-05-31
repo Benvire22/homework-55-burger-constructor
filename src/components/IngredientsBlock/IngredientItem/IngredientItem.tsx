@@ -10,7 +10,12 @@ interface Props {
   removeIngredient: () => void;
 }
 
-const IngredientItem: React.FC<Props> = ({name, price, image, count, addIngredient, removeIngredient}) => {
+const IngredientItem: React.FC<Props> = ({
+   name,
+   price,
+   image, count,
+   addIngredient, removeIngredient
+}) => {
   return (
     <div className="Ingredient">
       <div className="Ingredient-info">
