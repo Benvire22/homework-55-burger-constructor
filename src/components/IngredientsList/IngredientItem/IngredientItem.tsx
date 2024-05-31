@@ -16,6 +16,7 @@ const IngredientItem: React.FC<Props> = ({
    image, count,
    addIngredient, removeIngredient
 }) => {
+
   return (
     <div className="Ingredient">
       <div className="Ingredient-info">

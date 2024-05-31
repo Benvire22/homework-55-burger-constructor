@@ -9,7 +9,7 @@ interface Props {
   removeIngredient: (name: string) => void;
 }
 
-const IngredientsBlock: React.FC<Props> = ({
+const IngredientsList: React.FC<Props> = ({
      ingredients,
      ingredientsInfo,
      addIngredient,
@@ -34,5 +34,5 @@ const IngredientsBlock: React.FC<Props> = ({
   );
 };
 
-export default IngredientsBlock;
+export default IngredientsList;
 

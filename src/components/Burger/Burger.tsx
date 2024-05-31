@@ -9,10 +9,15 @@ interface Props {
 
 const Burger: React.FC<Props> = ({ingredients, price}) => {
 
-  const addIngredient = (ingredients: IngredientInfo[]) => {
+  const addIngredients = (ingredients: IngredientInfo[]) => {
     return ingredients.reduce((acc: React.ReactNode[], current) => {
       for (let i = 0; i < current.count; i++) {
-        acc.push(<div key={current.count + current.name + i} className={current.name}></div>);
+        acc.push(
+          <div
+            key={current.count + current.name + i}
+            className={current.name}
+          ></div>
+        );
       }
 
       return acc;
@@ -27,7 +32,7 @@ const Burger: React.FC<Props> = ({ingredients, price}) => {
           <div className="Seeds1"></div>
           <div className="Seeds2"></div>
         </div>
-        {addIngredient(ingredients)}
+        {addIngredients(ingredients)}
         <div className="BreadBottom"></div>
       </div>
       <h3 className="burgerPrice">Price: {price()}.</h3>

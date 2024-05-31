@@ -12,7 +12,7 @@
 }
 
 .BreadBottom {
-    height: 13%;
+    height: 18%;
     width: 90%;
     background: linear-gradient(#F08E4A, #e27b36);
     border-radius: 0 0 30px 30px;
@@ -21,7 +21,7 @@
 }
 
 .BreadTop {
-    height: 20%;
+    height: 30%;
     width: 90%;
     background: linear-gradient(#bc581e, #e27b36);
     border-radius: 50% 50% 0 0;
@@ -110,7 +110,7 @@
 }
 
 .Salad {
-    width: 90%;
+    width: 93%;
     height: 7%;
     margin: 2% auto;
     background: linear-gradient(#228c1d, #91ce50);

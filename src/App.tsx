@@ -1,14 +1,12 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import './App.css';
 import meatImage from './assets/meat.png';
 import cheeseImage from './assets/cheese.png';
 import lettuceImage from './assets/lettuce.png';
 import baconImage from './assets/bacon.png';
 import Burger from './components/Burger/Burger';
-import IngredientsBlock from './components/IngredientsBlock/IngredientsBlock';
-import {Ingredient, IngredientInfo} from './lib/interfaces';
-
-
+import IngredientsList from './components/IngredientsList/IngredientsList';
+import { Ingredient, IngredientInfo } from './lib/interfaces';
 
 const INGREDIENTS: Ingredient[] = [
   {name: 'Meat', price: 80, image: meatImage},
@@ -49,28 +47,27 @@ const App = () => {
             count: ingredient.count - 1
           };
         }
+
         return ingredient;
       });
     });
   };
 
   const getPrice = () => {
-    return ingredients.reduce((price, ingredient) => {
-      for (let i = 0; i < ingredient.count; i++) {
-        INGREDIENTS.map(ingr => {
-          if (ingr.name === ingredient.name) {
-            price += ingr.price;
-          }
-        });
-      }
+    return ingredients.reduce((acc, current) => {
+      INGREDIENTS.forEach(ingredient => {
+        if (ingredient.name === current.name) {
+          acc += ingredient.price * current.count;
+        }
+      });
 
-      return price;
+      return acc;
     }, 30);
   };
 
   return (
     <div className="App">
-        <IngredientsBlock
+        <IngredientsList
           ingredients={INGREDIENTS}
           ingredientsInfo={ingredients}
           addIngredient={addIngredient}
