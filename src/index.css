@@ -1,5 +1,5 @@
 :root {
-  color: #000;
+  color: #0d424b;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -7,6 +7,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #67c7d8;
 }
 
 a {
@@ -25,7 +26,7 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 2.8em;
+h2 {
+  font-size: 2em;
   line-height: 1.1;
 }

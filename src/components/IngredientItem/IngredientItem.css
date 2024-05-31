@@ -1,0 +1,52 @@
+.Ingredient {
+    font-size: 20px;
+    margin-bottom: 20px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.Ingredient-info {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.Ingredient-image {
+    cursor: pointer;
+    flex-basis: 20%;
+    width: 100px;
+    height: 100px;
+}
+
+.Ingredient-price {
+    flex-basis: 20%;
+}
+
+.Ingredient-name {
+    flex-basis: 20%;
+    margin-left: 40px;
+}
+
+.Ingredient-count {
+    flex-basis: 20%;
+    margin-left: auto;
+}
+
+.remove-ingredient {
+    flex-basis: 20%;
+    width: 100px;
+    margin-left: auto;
+}
+
+.remove-btn {
+    padding: 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    background: url("./../../assets/icons/remove-ic.svg") center / 50px no-repeat;
+}

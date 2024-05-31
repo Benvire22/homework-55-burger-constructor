@@ -4,3 +4,22 @@
   padding: 2rem;
   text-align: center;
 }
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.col {
+  flex-basis: 50%;
+  border: 2px solid #2a6489;
+  border-radius: 15px;
+  padding: 15px;
+  background: #e0e2e2;
+}
+
+.title {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
