@@ -1,0 +1,22 @@
+.Ingredient {
+    font-size: 20px;
+}
+
+.Ingredient-info {
+    display: flex;
+    align-items: center;
+}
+
+.Ingredient-image {
+    width: 100px;
+    height: 100px;
+}
+
+
+.Ingredient-name {
+    margin: 0 40px;
+}
+
+.Ingredient-count {
+    margin-left: 100px;
+}
